@@ -1,0 +1,14 @@
+<div class="charts">
+  <div class="line" [chart]="lineChart"></div>
+</div>
+
+<div class="controls">
+  <div>By: Ashutosh Bhalot</div>
+  <button (click)="addDataPoint()">Add Data Point</button>
+  <label class="l1" for="timeline">Select Timeline:</label>
+  <select id="timeline" [(ngModel)]="selectedTimeline" (change)="filterChart()">
+    <option value="all">All</option>
+    <option value="10">Last 10 minutes</option>
+    <option value="60">Last 1 hour</option>
+  </select>
+</div>
